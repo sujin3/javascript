@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초문법</title>
+</head>
+<body>
+    <h1>2장. 자바스크립트 기초문법</h1>
+    <h2>도전 MISSION</h2>
+    <h3>Q1. 진영이의 하루 지출이 적절한지 판단하는 프로그램</h3>
+    <script>
+        //진영이의 하루 지출 내역
+        //교통비 : 3000
+        //식비 : 6000
+        //음료비 : 3000
+        //삼항 조건 연산자를 사용, 하루 적정 지출비용 1만원(조건)
+        //000원 초과 or 돈관리 잘했어요 -->출력(body)
+        document.write("=======================진영이의 하루 지출관리 프로그램========================","<br>");
+        document.write("교통비 3000원, 식비 6000원, 음료비 3000원 지출했음","<br>");
+        var cost1 = 3000, cost2 = 6000, cost3 = 3000;  
+        var costSUM = cost1+cost2+cost3;
+        //조건 ? 참일때 : 거짓일때;
+        costSUM > 10000 ? document.write("<strong>"+(costSUM-10000)+"</strong>원 초과","<br>") : document.write("돈관리 잘했어요!","<br>");
+        costSUM < 10000 ? document.write("돈관리 잘했어요!","<br>") : document.write((costSUM-10000)+"원 초과","<br>");
+    </script>
+    
+    <h3>Q2. 평균 판매량을 구하는 프로그램</h3>
+    <script>
+        //연산자를 이용하여 평균 판매량을 구하기 : salesAvg
+        //1분기 :1200
+        //2분기 : 1300
+        //3분기 : 1000
+        //4분기 : 질의응답창, prompt()을 이용해서 입력받고,
+        //전 분기 판매량 <--> 4분기 판매량 비교,
+        //판매량이 평균이상입니다 or 판매량이 평균 미달입니다 출력
+
+        var sale1 = 1200, sale2 = 1300, sale3 = 1000;
+        var sale4 = Number(prompt("4분기 판매량을 입력하세요!"));
+        var saleAvg = (sale1 + sale2 + sale3 + sale4) / 4;
+        sale4 >=saleAvg ? document.write("평균 판매량 <strong>이상</strong> 입니다","<br>") : document.write("평균 판매량 <strong>미달</strong>입니다.","<br>");
+    </script>
+</body>
+</html>
