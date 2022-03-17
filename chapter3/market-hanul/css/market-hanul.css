@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+body {
+    font: 16px/1.5 "Nanum Gothic", sans-serif;
+    color: #333;
+}
+
+.d-none {
+    display: none;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================header=================== */
+.header-wrap {
+    max-width: 1190px;
+    margin: 0 auto;
+}
+.top-links {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.top-links li {
+    margin-left: 10px;
+}
+#gnb {
+    display: flex;
+    justify-content: center;
+}
+#gnb li {
+    margin: 10px 5px;
+}
+.logo {
+    text-align: center;
+    margin: 20px;
+}
+/* ================hero=================== */
+.hero {
+    overflow: hidden;
+}
+.hero img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main-wrap {
+    max-width: 1190px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.main-wrap h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin: 50px;
+}
+
+
+.banner-form {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+
+}
+.banner {
+    width: 40%;
+}
+.banner img {
+    max-width: 100%;
+}
+.form {
+    width: 60%;
+    padding: 0 0 0 5%;
+}
+.form label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+#user_id {
+    width: 230px;
+    padding: 10px 0;
+    margin: 20px 0;
+    text-indent: 1rem;
+}
+#user_pw {
+    width: 230px;
+    padding: 10px 0;
+    text-indent: 1rem;
+}
+#go_login {
+    background: violet;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+}
+
+#login-form li:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+#login-form li:nth-last-child(1) {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+
+
+footer {
+    background: black;
+    color: white;
+}
+.footer-wrap {
+    max-width: 1190px;
+    margin: 100px auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+.logo2 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
