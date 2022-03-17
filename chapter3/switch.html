@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선택문</title>
+    <title>제어문 &gt; 선택문</title>
 </head>
 <body>
-    
+    <h1>제어문</h1>
+    <h2>선택문</h2>
+    <p>변수에 저장된 값을 비교해서 일치한 경우, 해당 코드를
+        실행하는 구문
+    </p>
+    <code>
+        <pre>
+            var 변수 = 초기값;
+            switch(변수) {
+                case 값1 : 실행코드1;
+                break;
+                case 값2 : 실행코드2;
+                break;
+                ...계속...
+                default : 실행코드n;
+            }
+        </pre>
+    </code>
+    <h3>switch 예시</h3>
+    <script>
+        // 즐겨사용하는 포털 사이트를 질의 응답창을 이용해 
+        // 물어보고, 일치하는 포털 사이트로 URL을 리다이렉트
+        // prompt()
+        // 값 비교 : if. if else , if else if, if(if())
+
+        // switch ~ case : case가 정해져 있을 때 사용
+        var likeSite = prompt("즐겨찾는 포털사이트의 이름은?","예)네이버,다음,구글");
+        if(likeSite.toLocaleLowerCase() === "naver") {
+            likeSite = "네이버"
+        } else if(likeSite.toLocaleLowerCase() === "daum") {
+            likeSite = "다음"
+        } else if(likeSite.toLocaleLowerCase() === "google") {
+            likeSite = "구글";
+        }
+        var targetURL;
+        switch(likeSite) {
+            case "네이버":targetURL="naver.com";
+            break;
+            case "다음":targetURL="daum.net";
+            break;
+            case "구글":targetURL="google.com";
+            break;
+            default:alert("네이버,다음,구글 중에서만 입력하세요.")
+        }
+        if(targetURL) {
+            location.href="http://"+targetURL;
+        } 
+    </script>
 </body>
 </html>
