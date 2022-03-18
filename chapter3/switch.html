@@ -34,15 +34,24 @@
 
         // switch ~ case : case가 정해져 있을 때 사용
         var likeSite = prompt("즐겨찾는 포털사이트의 이름은?","예)네이버,다음,구글");
-        if(likeSite.toLocaleLowerCase() === "naver") {
+        /* if(likeSite.toLocaleLowerCase() === "naver") {
             likeSite = "네이버"
         } else if(likeSite.toLocaleLowerCase() === "daum") {
             likeSite = "다음"
         } else if(likeSite.toLocaleLowerCase() === "google") {
             likeSite = "구글";
-        }
+        } */
         var targetURL;
-        switch(likeSite) {
+        if(likeSite === "네이버" || likeSite.toLocaleLowerCase() === "naver") {
+            targetURL = "naver.com"
+        } else if(likeSite === "다음" || likeSite.toLocaleLowerCase() === "daum") {
+            targetURL = "daum.net"
+        } else if(likeSite === "구글" || likeSite.toLocaleLowerCase() === "google") {
+            targetURL = "google.com"
+        } else {
+            alert("네이버, 구글, 다음 중에서만 입력하세요.")
+        }
+        /* switch(likeSite) {
             case "네이버":targetURL="naver.com";
             break;
             case "다음":targetURL="daum.net";
@@ -50,7 +59,7 @@
             case "구글":targetURL="google.com";
             break;
             default:alert("네이버,다음,구글 중에서만 입력하세요.")
-        }
+        } */
         if(targetURL) {
             location.href="http://"+targetURL;
         } 
