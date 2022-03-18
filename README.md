@@ -11,4 +11,5 @@
 - 반복문 : while, do while, for
 
 # mission
-- p.58 Mission I,II 
+- p.58 Mission I,II : finished
+- p.84 Mission I,II : finished
