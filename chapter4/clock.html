@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 &gt; 날짜 객체</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            font: 16px/1.5 "Maven Pro", "Noto Sans KR";
+            background: url("https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_960_720.jpg") no-repeat center/cover;
+        }
+        h1, h2, #time_text {
+            text-align: center;
+            color: white;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 4);
+        }
+        h1 {
+            margin: 5rem 0 1rem 0;
+            font-size: 3rem;
+        }
+        h2 {
+            margin: 3rem 0 2rem 0;
+            font-size: 2rem;
+        }
+        #time_text {
+            font-size: 1.25rem;
+            padding: 1rem 3rem;
+            border: 2px solid white;
+            border-radius: 30px;
+        }
+        .time-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        hr {
+            width: 60%;
+            margin: 2rem auto;
+            height: 1px;
+            background: white;
+            border: 0;
+        }
+        .alarm-wrap {
+            width: 40%;
+            margin: 0 auto;
+        }
+        .alarm-wrap label {
+            display: none;
+        }
+        .alarm-wrap input[type=text] {
+            padding: 1rem 0;
+            text-indent: 1rem;
+            margin: .5rem;
+            width: 100%;
+        }
+        #set_alarm {
+            background: yellowgreen;
+            color: black;
+            margin: 1rem;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>시간, 날짜 정보 출력</h1>
+    <h2>시계 만들기</h2>
+    <div class="time-wrap">
+        <div id="time_text">시:분:초</div>
+    </div>
+    <hr>
+    <form id="alarm_form">
+        <ul class="alarm-wrap">
+            <li>
+                <label for="alarm_hour">시</label>
+                <input type="text" id="alarm_hour" maxlength="2" placeholder="시">
+            </li>
+            <li>
+                <label for="alarm_hour">분</label>
+                <input type="text" id="alarm_hour" maxlength="2" placeholder="분">
+            </li>
+            <li>
+                <input type="submit" id="set_alarm" value="설정">
+            </li>
+        </ul>
+    </form>
+    <script>
+        var myDate = new Date();
+        var myHours = myDate.getHours();
+        var myMins = myDate.getMinutes();
+        var mySec = myDate.getSeconds();
+
+        //출력대상 탐색
+        var targetTag = document.querySelector("#time_text");
+        //console.dir(targetTag);
+        targetTag.innerHTML = `<strong>${myHours}:${myMins}:${mySec}</strong>`;
+
+        //알람을 설정하려면?
+        /* if(내가 원하는 시 == myHours){
+            if(내가 원하는 분 == myMins){
+
+            }
+        } */
+        
+        
+        //p.118~121
+        //.setTimeout() : 지정시간이 종료되면
+        //.setInterval() : 매 지정 시간마다 (반복)
+
+
+    </script>
+</body>
+</html>
