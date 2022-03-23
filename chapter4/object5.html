@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 &gt; 날짜객체</title>
+</head>
+<body>
+    <h1>특정 날짜를 Date객체를 이용해 설정, 관련 정보 추출</h1>
+    <p>2002년 월드컵 날짜와 관련된 정보를 출력하는 예제</p>
+    <script>
+        var today = new Date();
+        //console.log(today);
+        var nowMonth = today.getMonth(), //0~11 : +1 --> 실제 월
+        //console.log(nowMonth);
+        nowDate = today.getDate(),
+        nowDay = today.getDay();
+        //dayName;
+        // 숫자 0 : 일요일, 1 : 월요일..... 6 : 토요일
+        // 배열객체를 이용해서 요일정보를 3-->수요일로 출력하시오
+        /* switch(nowDay){
+            case 0 : dayName = "일";
+            break;
+            case 1 : dayName = "월";
+            break;
+            case 2 : dayName = "화";
+            break;
+            case 3 : dayName = "수";
+            break;
+            case 4 : dayName = "목";
+            break;
+            case 5 : dayName = "금";
+            break;
+            case 6 : dayName = "토";
+            break;
+            default : alert("일시적인 네트워크 오류가 발생했습니다.\n 다시 시도해주세요.")
+        } */
+        //var dayName = ["일","월","화","수","목","금","토"];
+        //document.write(`오늘은 ${nowMonth}월, ${nowDate}일, ${dayName[nowDay]}요일이다.`);
+
+
+       /*  //if조건문으로 수요일 출력
+        if(nowDay == 0) {
+            nowDay == "일";
+        } else if(nowDay == 1){
+            nowDay == "월";
+        } else if(nowDay == 2){
+            nowDay == "화";
+        } else if(nowDay == 3){
+            nowDay == "수";
+        } else if(nowDay == 4){
+            nowDay == "목";
+        } else if(nowDay == 5){
+            nowDay == "금";
+        } else if(nowDay == 6){
+            nowDay == "토";
+        }
+        */
+
+        var worldcup = new Date(2002,4,31)
+        var theMonth = worldcup.getMonth(),
+        theDate = worldcup.getDate(),
+        theDay = worldcup.getDay(),
+        dayName;
+        switch(nowDay) {
+            case 0 : dayName = "일";
+            break;
+            case 1 : dayName = "월";
+            break;
+            case 2 : dayName = "화";
+            break;
+            case 3 : dayName = "수";
+            break;
+            case 4 : dayName = "목";
+            break;
+            case 5 : dayName = "금";
+            break;
+            case 6 : dayName = "토";
+            break;
+            default : alert("일시적인 네트워크 오류입니다.\n 다시 시도해주세요.")
+        }
+        document.write(`그 날은 ${theMonth}월, ${theDate}일, ${dayName}요일이다.`);
+
+    </script>
+</body>
+</html>
