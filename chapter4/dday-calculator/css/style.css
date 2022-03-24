@@ -25,6 +25,10 @@ a, a:link {
     display: flex;
     justify-content: space-between;
 }
+.top-wrap h1 {
+    text-transform: capitalize;
+    font-size: 1rem;
+}
 .top-links {
     display: flex;
     column-gap: 15px;
@@ -36,17 +40,35 @@ a, a:link {
 .top-links i {
     margin: 5px;
 }
-.article-wrap {
+.article-wrap, #result_pop {
     width: 400px;
-    height: 500px;
+    height: 300px;
     position: absolute;
     left: 30%;
     top: 50%;
     transform: translate(-50%,-50%);
     z-index: 100;
 }
-article h3, p {
+#result_pop {
+    z-index: 1000;
+    background: white;
+    border-radius: 1rem;
+    text-align: center;
+}
+#result_pop h1 {
+    font-size: 2rem;
+    margin: 20px 10px;
+}
+#result_pop p {
+    font-size: 1.25rem;
+    padding: 10px;
+}
+#d_day strong {
+    color: red;
+}
+article h3, article p {
     color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
 }
 article h3 {
     font-size: 2.5rem;
@@ -78,6 +100,7 @@ article p {
     display: block;
     flex: 1;
     color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
 }
 .form-list li input {
     flex: 6;
@@ -107,8 +130,34 @@ article p {
     border: 0;
     flex: 200px;
     font-size: 16px;
+    color: black;
 }
 .form-list li:nth-last-child(1) {
     justify-content: center;
     column-gap: 15px;
 }
+
+/* ==============기존 스타일 마지막에 미디어 쿼리 권장!================== */
+@media screen and (max-width: 480px) { /* 모바일 디바이스 크기 */
+    .top-wrap {
+        max-width: 100%;
+        padding: 0 1rem;
+        align-items: center;
+    }
+    .top-wrap h1 {
+        text-transform: capitalize;
+        font-size: 3.75rem;
+    }
+    #burger {
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+    .article-wrap {
+        max-width: 93.75%;
+        left: 50%;
+    }
+    .top-links {
+        display: none;
+    }
+}
+
