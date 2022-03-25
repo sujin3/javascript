@@ -20,7 +20,6 @@
         <li>.ceil() : 소수점 첫째 무조건 올림한 값 반환</li>
         <li>.floor() : 소수점 첫째 무조건 내림한 값 반환</li>
         <li>.sqrt() : 숫자의 제곱근 값 반환</li>
-        <li>.PI : 원주율 상수 반환</li>
     </ul>
     <h2>수학객체 - 프로퍼티</h2>
     <ul>
@@ -33,8 +32,49 @@
         // .document.write()
 
         //로또 번호 생성기
-        var ranNum = Math.floor(Math.random()*11);
-        console.log(ranNum);
+        //0~9까지 난수를 생성
+        //var ranNum = Math.floor(Math.random()*10);
+        
+        
+        //.97 120~150 사이의 난수를 발생
+        /* var ranNum1 = Math.floor(Math.random()*31);
+        var ranNum2 = Math.floor(Math.random()*31)+120;
+        console.log(ranNum1,ranNum2); */
+
+
+        //코딩해보세요
+        //웹사이트 방문시 창에 방문자가 가위, 바위, 보 중 하나를 입력하면
+        //컴퓨터가 랜덤으로 내리ㅕ는 가위, 바위, 보와 일치했을 때
+        //맞추는 게임(컴퓨터가 무엇을 낼지 예측하는 게임)
+
+        //Math.random()
+
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+
+        var game = prompt("가위, 바위, 보 중 하나를 입력하세요");
+        var gameNum; //<-- ?! 가위(0:가위, 1:바위)
+        switch(game) {
+            case "가위" : gameNum = 1; 
+            break;
+            case "바위" : gameNum = 2; 
+            break;
+            case "보" : gameNum = 3;
+            break;
+            default:alert("가위, 바위, 보 중 하나만 입력하세요!");
+            location.reload();
+        }
+
+        var com = Math.ceil(Math.random()*3); //0~1 사이의 난수
+        //console.log("컴퓨터의 난수 값 : "+com);
+
+        document.write("<img src=\"images/math_img_"+gameNum+".gif\" alt=\"사용자\">", "<br>");
+        document.write(`<img src="images/math_img_${com}.gif" alt="컴퓨터">`, "<br>");
+
+        if(gameNum == com){
+            document.write(`<img src="images/game_1.gif" alt="컴퓨터">`, "<br>");
+        } else {
+            document.write(`<img src="images/game_2.gif" alt="컴퓨터">`, "<br>");
+        }
     </script>
 </body>
 </html>
