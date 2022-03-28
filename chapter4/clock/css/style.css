@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+}
+body {
+    font: 16px/1.5 "Maven Pro", "Noto Sans KR";
+    background: url("https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_960_720.jpg") no-repeat center/cover;
+}
+h1, h2, #time_text {
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 4);
+}
+h1 {
+    margin: 5rem 0 1rem 0;
+    font-size: 3rem;
+}
+h2 {
+    margin: 3rem 0 2rem 0;
+    font-size: 2rem;
+}
+#time_text {
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+.time-wrap {
+    display: flex;
+    justify-content: center;
+}
+hr {
+    width: 60%;
+    margin: 2rem auto;
+    height: 1px;
+    background: white;
+    border: 0;
+}
+.alarm-wrap {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.alarm-wrap label {
+    display: none;
+}
+.alarm-wrap input[type=text] {
+    padding: 1rem 0;
+    text-indent: 1rem;
+    margin: .5rem;
+}
+#set_alarm {
+    background: palegoldenrod;
+    color: #333;
+    margin: 1rem;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid goldenrod;
+    border-radius: 30px;
+}
